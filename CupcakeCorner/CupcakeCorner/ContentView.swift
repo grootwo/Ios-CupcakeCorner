@@ -7,15 +7,29 @@
 
 import SwiftUI
 
+struct Response: Codable {
+    var results: [Result]
+}
+
+struct Result: Codable {
+    var trackId: Int
+    var trackName: String
+    var collectionName: String
+}
+
 struct ContentView: View {
+    @State private var results = [Result]()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        List {
+            ForEach(results, id: \.trackId) { result in
+                VStack {
+                    Text(result.trackName)
+                        .font(.headline)
+                    Text(result.collectionName)
+                        .font(.caption)
+                }
+            }
         }
-        .padding()
     }
 }
 
