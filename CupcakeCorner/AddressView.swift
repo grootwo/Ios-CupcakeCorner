@@ -22,6 +22,7 @@ struct AddressView: View {
                     CheckoutView()
                 }
             }
+            .disabled(!order.hasValidAddress)
         }
     }
 }
