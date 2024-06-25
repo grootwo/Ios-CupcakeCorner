@@ -19,7 +19,7 @@ struct AddressView: View {
             }
             Section {
                 NavigationLink("Check out") {
-                    CheckoutView()
+                    CheckoutView(order: order)
                 }
             }
             .disabled(!order.hasValidAddress)
