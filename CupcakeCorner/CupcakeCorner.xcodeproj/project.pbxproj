@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B0B2B172C295F680013A123 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B2B162C295F680013A123 /* Order.swift */; };
 		1B0B2B192C29627D0013A123 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0B2B182C29627D0013A123 /* AddressView.swift */; };
+		1BAF542C2C2A47DC0015937D /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAF542B2C2A47DC0015937D /* CheckoutView.swift */; };
 		1BBB8DD92C26594C00DAC75C /* CupcakeCornerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBB8DD82C26594C00DAC75C /* CupcakeCornerApp.swift */; };
 		1BBB8DDB2C26594C00DAC75C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBB8DDA2C26594C00DAC75C /* ContentView.swift */; };
 		1BBB8DDD2C26594D00DAC75C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BBB8DDC2C26594D00DAC75C /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		1B0B2B162C295F680013A123 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		1B0B2B182C29627D0013A123 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		1BAF542B2C2A47DC0015937D /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		1BBB8DD52C26594C00DAC75C /* CupcakeCorner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupcakeCorner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BBB8DD82C26594C00DAC75C /* CupcakeCornerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupcakeCornerApp.swift; sourceTree = "<group>"; };
 		1BBB8DDA2C26594C00DAC75C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,6 +41,7 @@
 		1BBB8DCC2C26594C00DAC75C = {
 			isa = PBXGroup;
 			children = (
+				1BAF542B2C2A47DC0015937D /* CheckoutView.swift */,
 				1B0B2B182C29627D0013A123 /* AddressView.swift */,
 				1B0B2B162C295F680013A123 /* Order.swift */,
 				1BBB8DD72C26594C00DAC75C /* CupcakeCorner */,
@@ -145,6 +148,7 @@
 			files = (
 				1B0B2B172C295F680013A123 /* Order.swift in Sources */,
 				1B0B2B192C29627D0013A123 /* AddressView.swift in Sources */,
+				1BAF542C2C2A47DC0015937D /* CheckoutView.swift in Sources */,
 				1BBB8DDB2C26594C00DAC75C /* ContentView.swift in Sources */,
 				1BBB8DD92C26594C00DAC75C /* CupcakeCornerApp.swift in Sources */,
 			);
