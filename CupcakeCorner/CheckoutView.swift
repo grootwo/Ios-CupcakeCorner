@@ -25,7 +25,10 @@ struct CheckoutView: View {
                     .font(.title)
                 Button("Place Order") {
                     Task {
-                        await placeOrder()
+                        if !(await placeOrder()) {
+                            confirmationMessage = "Failed to place order. Please check if you're in proper environment."
+                            showingConfirmation = true
+                        }
                     }
                 }
                 .padding()
@@ -40,10 +43,10 @@ struct CheckoutView: View {
             Text(confirmationMessage)
         }
     }
-    func placeOrder() async {
+    func placeOrder() async -> Bool{
         guard let encoded = try? JSONEncoder().encode(order) else {
             print("Error: Failed to encode order")
-            return
+            return false
         }
         let url = URL(string: "https://reqres.in/api/cupcakes")!
         var request = URLRequest(url: url)
@@ -54,9 +57,10 @@ struct CheckoutView: View {
             let decodedOrder = try JSONDecoder().decode(Order.self, from: data)
             confirmationMessage = "Your order for \(decodedOrder.quantity) x \(Order.types[decodedOrder.type].lowercased()) cupcakes is on its way!"
             showingConfirmation = true
+            return true
         } catch {
             print("Error: Get \(error.localizedDescription)")
-            return
+            return false
         }
     }
 }
