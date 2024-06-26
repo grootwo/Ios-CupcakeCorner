@@ -41,8 +41,8 @@ class Order: Codable {
     var city = ""
     var zip = ""
     var hasValidAddress: Bool {
-        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
-            return false
+        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty || streetAddress.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+                return false
         }
         return true
     }
