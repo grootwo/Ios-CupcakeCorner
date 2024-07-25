@@ -21,6 +21,7 @@ struct CheckoutView: View {
                 } placeholder: {
                     ProgressView()
                 }
+                .accessibilityHidden(true)
                 Text("Your cost is \(order.cost, format: .currency(code: "USD"))")
                     .font(.title)
                 Button("Place Order") {
